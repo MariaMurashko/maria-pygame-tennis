@@ -2,6 +2,9 @@ import pygame  # Импорт модуля пайгейм
 import random
 pygame.init()
 
+ping = pygame.mixer.Sound('20725-otskok-puli-skorrektirovalos-napravlenie.mp3')
+loose = pygame.mixer.Sound('20725-otskok-puli-skorrektirovalos-napravlenie.mp3')
+
 width = 1366
 height = 768
 fps = 60
