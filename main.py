@@ -4,6 +4,10 @@ pygame.init()
 
 ping = pygame.mixer.Sound('20725-otskok-puli-skorrektirovalos-napravlenie.mp3')
 loose = pygame.mixer.Sound('20725-otskok-puli-skorrektirovalos-napravlenie.mp3')
+pygame.mixer.music.load('muzyka-na-zadniy-fon-zadniy-fon.mp3')
+pygame.mixer.music.set_volume(0.1)
+pygame.mixer.music.play(-1)
+
 
 width = 1366
 height = 768
