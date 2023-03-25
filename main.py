@@ -16,6 +16,18 @@ gameName = 'First Project'
 
 screen = pygame.display.set_mode((width, height))  # Создание экрана с заданными размера
 
+rounds = 3
+
+def draw_text(screen, text, size, x, y, color):
+    font_name = pygame.font.match_font('arial')
+    font = pygame.font.Font(font_name,size)
+    text_image = font.render(text, True, color)
+    text_rect = text_image.get_rect()
+    text_rect.center = (x,y)
+    screen.blit(text_image, text_rect)
+
+score = 0
+
 BLACK = '#000000'
 WHITE = '#FFFFFF'
 RED = '#FF0000'
@@ -56,6 +68,10 @@ while run:
         platform_rect.x -= 10
     if key[pygame.K_RIGHT] and platform_rect.right < width:
         platform_rect.x += 10
+
+
+
+
 
     if img_rect.colliderect(platform_rect):
         speedY = -speedY
